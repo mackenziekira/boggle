@@ -1,14 +1,14 @@
 from flask import Flask, render_template
-import string
-import random
+from helper_functions import render_board
 
 app = Flask(__name__)
 
 @app.route("/")
 def homepage():
-    alphabet = string.letters
-    rows = [[random.choice(alphabet).upper() for letter in xrange(6)] for row in xrange(6)]
-    return render_template('board.html', rows=rows)
+    board = render_board()
+    return render_template('board.html', board=board)
+
+
 
 
 if __name__ == "__main__":
