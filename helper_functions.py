@@ -6,7 +6,6 @@ def render_board():
 
     >>> render_board() # doctest: +ELLIPSIS
     [[...], [...], [...], [...], [...]]
-
     """
 
     alphabet = string.letters
