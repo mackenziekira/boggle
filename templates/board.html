@@ -1,0 +1,20 @@
+<!doctype HTML>
+
+<html>
+<head>
+  <title>Board</title>
+</head>
+<body>
+
+<table>
+  {% for row in rows %}
+  <tr>
+    {% for letter in row %}
+    <td>{{ letter }}</td>
+    {% endfor %}
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
