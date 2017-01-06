@@ -11,3 +11,4 @@ def render_board():
     alphabet = string.letters
     board = [[random.choice(alphabet).upper() for letter in xrange(5)] for row in xrange(5)]
     return board
+

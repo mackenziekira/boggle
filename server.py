@@ -6,9 +6,11 @@ app = Flask(__name__)
 
 cache = SimpleCache()
 
+
 @app.route("/")
 def homepage():
     board = render_board()
+    
     return render_template('board.html', board=board)
 
 @app.route("/guess")
@@ -27,3 +29,4 @@ def guess():
 if __name__ == "__main__":
     app.debug = True
     app.run()
+    
